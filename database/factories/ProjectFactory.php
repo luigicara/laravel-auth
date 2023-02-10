@@ -21,7 +21,7 @@ class ProjectFactory extends Factory
             'description'=>fake()-> boolean()
                                             ? fake()->paragraph()
                                             : '',
-            'main_image'=>fake()->imageUrl(360, 360, 'animals', true, 'cats'),
+            // 'main_image'=>fake()->imageUrl(360, 360, 'animals', true, 'cats'),
             'release_date'=>fake()->date(),
             'repo_link'=>fake()->url(),
         ];
