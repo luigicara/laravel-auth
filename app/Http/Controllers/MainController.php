@@ -31,7 +31,6 @@ class MainController extends Controller
         return view('pages.projectShow', compact('project'));
     }
 
-    // delete
     public function projectDelete(Project $project) {
 
         $project -> delete();
@@ -39,13 +38,11 @@ class MainController extends Controller
         return redirect() -> route('dashboard');
     }
 
-    // create
     public function projectCreate() {
 
         return view('pages.projectCreate');
     }
 
-    // store
     public function projectStore(Request $request) {
 
         $data = $request -> validate([
