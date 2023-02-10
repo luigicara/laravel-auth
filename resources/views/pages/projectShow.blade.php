@@ -7,7 +7,7 @@
 		<article>
 
 			<a href="#">
-				<img src="https://picsum.photos/300/300" alt="Image Title" />
+				<img src="{{ asset('storage/' . $project -> main_image) }}" alt="Image Title" />
 			</a>
 
 			<div>
