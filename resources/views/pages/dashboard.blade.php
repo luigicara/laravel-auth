@@ -15,6 +15,10 @@
     .my_info {
         width: 25%;
     }
+
+    .my_anchor {
+        display: contents
+    }
 </style>
 
 <h1 class="text-center"><a href="{{ route('project.create') }}" class="btn btn-success">New Project</a></h1>
@@ -34,8 +38,8 @@
             </a>
         </div>
 
-        <a href="{{ route('project.show', $project) }}">
-            <img src="{{ $project -> main_image }}" class="img-fluid">
+        <a href="{{ route('project.show', $project) }}" class="my_anchor">
+            <img src="{{ asset('storage/' . $project -> main_image) }}" class="img-fluid">
         </a>
 
         <h3 class="card-title">{{ $project -> name }}</h3>

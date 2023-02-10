@@ -12,7 +12,11 @@
     }
 
     .my_info {
-        width: 25%;
+        width: 40%;
+    }
+
+    .my_anchor {
+        display: contents
     }
 </style>
 
@@ -20,8 +24,8 @@
 
     @foreach ($projects as $project)
     <div class="card">
-        <a href="{{ route('project.show', $project) }}">
-            <img src="{{ $project -> main_image }}" class="img-fluid">
+        <a href="{{ route('project.show', $project) }}" class="my_anchor">
+            <img src="{{ asset('storage/' . $project -> main_image) }}" class="img-fluid">
         </a>
 
         <h3 class="card-title">{{ $project -> name }}</h3>
