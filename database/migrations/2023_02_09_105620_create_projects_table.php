@@ -18,7 +18,7 @@ return new class extends Migration
 
             $table->string('name', 64)->unique();
             $table->text('description')->nullable();
-            $table->string('main_image')->unique();
+            $table->string('main_image')->default('prj-no-image.jpg');
             $table->date('release_date');
             $table->string('repo_link')->unique();
 
